@@ -12,7 +12,7 @@ class xdebug (
     ensure  => 'present',
     content => template($ini_template),
     notify  => Service['httpd'],
-    require => Package['httpd'],
+    require => Package['php5'],
   }
 
 }
