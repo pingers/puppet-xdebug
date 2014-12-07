@@ -2,9 +2,8 @@
 #
 class xdebug::packages {
 
-  package { 'xdebug':
+  package { 'php5-xdebug':
     ensure   => 'latest',
-    provider => 'pecl', 
   }
 
 }
