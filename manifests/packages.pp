@@ -2,8 +2,10 @@
 #
 class xdebug::packages {
 
-  package { 'php5-xdebug':
-    ensure   => 'latest',
+  if ! defined(Package['php5-xdebug']) {
+    package { 'php5-xdebug':
+      ensure   => 'latest',
+    }
   }
 
 }
