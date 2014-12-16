@@ -1,18 +1,24 @@
 # The main class for xdebug.
-#
+
 class xdebug (
-  $extension        = $xdebug::params::extension,
-  $ini_path         = $xdebug::params::ini_path,
-  $ini_template     = $xdebug::params::ini_template,
+  $extension = $xdebug::params::extension,
+  $ini       = $xdebug::params::ini,
 ) inherits xdebug::params {
 
   include xdebug::packages
 
-  file { $ini_path:
+  file { '/etc/php5/mods-available/xdebug.ini':
     ensure  => 'present',
-    content => template($ini_template),
+    content => template($ini),
     notify  => Service['httpd'],
-    require => Package['libapache2-mod-php5'],
+    require => [
+      Package['php5-xdebug'],
+      Package['libapache2-mod-php5'],
+    ],
+  }
+  file { '/etc/php5/apache2/conf.d/20-xdebug.ini':
+    ensure => 'link',
+    target => '/etc/php5/mods-available/xhprof.ini',
   }
 
 }
