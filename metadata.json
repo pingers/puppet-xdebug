@@ -1,6 +1,6 @@
 {
   "name": "pnx-xdebug",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Nick Schuch",
   "summary": "PHP Xdebug",
   "license": "Apache-2.0",
