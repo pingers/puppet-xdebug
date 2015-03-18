@@ -18,7 +18,7 @@ class xdebug (
   }
   file { '/etc/php5/apache2/conf.d/20-xdebug.ini':
     ensure => 'link',
-    target => '/etc/php5/mods-available/xhprof.ini',
+    target => '/etc/php5/mods-available/xdebug.ini',
   }
 
 }
