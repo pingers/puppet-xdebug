@@ -1,0 +1,17 @@
+{
+  "name": "pnx-xdebug",
+  "version": "0.0.1",
+  "author": "Nick Schuch",
+  "summary": "PHP Xdebug",
+  "license": "Apache-2.0",
+  "source": "https://github.com/previousnext/previousnext-xdebug.git",
+  "project_page": "https://github.com/previousnext/previousnext-xdebug",
+  "issues_url": "https://github.com/previousnext/previousnext-xdebug/issues",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "dependencies": []
+}
